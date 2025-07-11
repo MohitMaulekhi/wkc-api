@@ -1,13 +1,30 @@
 {
-  "functions": {
-    "api/*.py": {
-      "runtime": "@vercel/python"
+  "builds": [
+    {
+      "src": "app/main.py",
+      "use": "@vercel/python"
     }
-  },
+  ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "src": "app/(.*)",
+      "dest": "app/main.py"
     }
+  ],
+  "excludeFiles": [
+    "**/*.pyc",
+    "**/__pycache__/**",
+    ".env",
+    ".git/**",
+    ".venv/**",
+    "automations/**",
+    "docs/**",
+    "logdir/**",
+    "tests/**",
+    "prisma/migrations/**",
+    "Dockerfile",
+    "README.md",
+    "pytest.ini",
+    "package.json"
   ]
 }
