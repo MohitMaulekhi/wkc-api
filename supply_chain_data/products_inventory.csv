@@ -1,3 +1,0 @@
-product_id,product_name,quantity_in_inventory,current_quantity_in_store,cost_price,selling_price,shelf_life_days,lead_time_days,category
-5005,Bread (per loaf),400,80,20,35,3,7,NonSeasonal_HighDemand
-5006,Cooking Oil (1L),600,100,120,150,730,7,NonSeasonal_RegularDemand
